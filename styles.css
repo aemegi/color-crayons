@@ -1,0 +1,86 @@
+h1 {
+  text-align: center;
+  font-family: fantasy;
+}
+
+
+
+.container {
+  background-color: rgb(255, 255, 255);
+  padding: 0;
+}
+
+.marker {
+  width: 200px;
+  height: 25px;
+  margin: 10px auto;
+  top: -10;
+}
+
+.cap {
+  width: 85px;
+  height: 25px;
+  
+  margin: 0;
+  padding: 0;
+}
+
+.sleeve {
+  width: 260px;
+  height: 75px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-left: 10px double rgba(0, 0, 0, 0.75);
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+  margin: auto;
+  padding: auto;
+  text-align: center;
+  font-family: fantasy;
+  font-size: 24px;
+  text-shadow: 0 0 3px #000, 0 0 5px #fff;
+}
+
+.cap, .sleeve {
+  display: inline-block;
+}
+
+.red {
+  background: linear-gradient(#ff4d4d, #FF0000, #330000);
+  box-shadow: 0 0 20px 0 red;
+  color: red;
+}
+
+.green {
+  background: linear-gradient(#4da64d, #008000, #001a00);
+  box-shadow: 0 0 20px 0 green;
+  color: green;
+
+}
+
+.blue {
+  background: linear-gradient(#4d4dff, #0000ff, #000033);
+  box-shadow: 0 0 20px 0 blue;
+  color: #0000ff;
+}
+
+.aliceBlue {
+  background: linear-gradient(#f5faff, #f0f8ff, #303233);
+  box-shadow: 0 0 20px 0 aliceblue;
+  color: #f0f8ff;
+}
+
+.antiqueWhite {
+  background: linear-gradient(#fcf1e3, #faebd7, #afa597);
+  box-shadow: 0 0 20px 0 antiquewhite;
+  color: #faebd7;
+}
+
+.crayon {
+  width: 400px;
+  height: 65px;
+  clip-path: polygon(100% 5%,100% 95%,20% 95%,0% 55%,0% 40%,20% 5%);
+  z-index: 0;
+  margin: auto;
+  padding: 0px;
+}

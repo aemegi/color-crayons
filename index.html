@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Color Crayons</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>HTML Colors Color Crayons</h1>
+    <div id="color-crayon"></div>
+    
+    <script>
+      // JavaScript variables
+    // JavaScript variables
+    var colors = [
+      { name: "AliceBlue", value: "#F0F8FF", shades: ["#ffffff", "#000000"] },
+      { name: "AntiqueWhite", value: "#FAEBD7", shades: ["#ffffff", "#000000"] },
+      { name: "Aqua", value: "#00FFFF", shades: ["#ffffff", "#000000"] },
+      { name: "Aquamarine", value: "#7FFFD4", shades: ["#fff", "#000"] },
+      { name: "Azure", value: "#F0FFFF", shades: ["#fff", "#000"] },
+      { name: "Beige", value: "#F5F5DC", shades: ["#fff", "#000"] },
+      { name: "Bisque", value: "#FFE4C4", shades: ["#fff", "#000"] },
+      { name: "Black", value: "#000", shades: ["#fff", "#000"] },
+      { name: "BlanchedAlmond", value: "#FFEBCD", shades: ["#fff", "#000"] },
+      { name: "Blue", value: "#0000FF", shades: ["#fff", "#000"] },
+      { name: "BlueViolet", value: "#8A2BE2", shades: ["#fff", "#000"] },
+      { name: "Brown", value: "#A52A2A", shades: ["#fff", "#000"] },
+      { name: "BurlyWood", value: "#DEB887", shades: ["#fff", "#000"] },
+      { name: "CadetBlue", value: "#5F9EA0", shades: ["#fff", "#000"] },
+      { name: "Chartreuse", value: "#7FFF00", shades: ["#fff", "#000"] },
+      { name: "Chocolate", value: "#D2691E", shades: ["#fff", "#000"] },
+      { name: "Coral", value: "#FF7F50", shades: ["#fff", "#000"] },
+      { name: "CornflowerBlue", value: "#6495ED", shades: ["#fff", "#000"] },
+      { name: "Cornsilk", value: "#FFF8DC", shades: ["#fff", "#000"] },
+      { name: "Crimson", value: "#DC143C", shades: ["#fff", "#000"] },
+      { name: "Cyan", value: "#00FFFF", shades: ["#fff", "#000"] },
+      { name: "DarkBlue", value: "#00008B", shades: ["#fff", "#000"] },
+      { name: "DarkCyan", value: "#008B8B", shades: ["#fff", "#000"] },
+      { name: "DarkGoldenRod", value: "#B8860B", shades: ["#fff", "#000"] },
+      { name: "DarkGray", value: "#A9A9A9", shades: ["#fff", "#000"] },
+      { name: "DarkGrey", value: "#A9A9A9", shades: ["#fff", "#000"] },
+      { name: "DarkGreen", value: "#006400", shades: ["#fff", "#000"] },
+      { name: "DarkKhaki", value: "#BDB76B", shades: ["#fff", "#000"] },
+      { name: "DarkMagenta", value: "#8B008B", shades: ["#fff", "#000"] },
+      { name: "DarkOliveGreen", value: "#556B2F", shades: ["#fff", "#000"] },
+      { name: "DarkOrange", value: "#FF8C00", shades: ["#fff", "#000"] },
+      { name: "DarkOrchid", value: "#9932CC", shades: ["#fff", "#000"] },
+      { name: "DarkRed", value: "#8B0000", shades: ["#fff", "#000"] },
+      { name: "DarkSalmon", value: "#E9967A", shades: ["#fff", "#000"] },
+      { name: "DarkSeaGreen", value: "#8FBC8F", shades: ["#fff", "#000"] },
+      { name: "DarkSlateBlue", value: "#483D8B", shades: ["#fff", "#000"] },
+      { name: "DarkSlateGray", value: "#2F4F4F", shades: ["#fff", "#000"] },
+      { name: "DarkSlateGrey", value: "#2F4F4F", shades: ["#fff", "#000"] },
+      { name: "DarkTurquoise", value: "#00CED1", shades: ["#fff", "#000"] },
+      { name: "DarkViolet", value: "#9400D3", shades: ["#fff", "#000"] },
+      { name: "DeepPink", value: "#FF1493", shades: ["#fff", "#000"] },
+      { name: "DeepSkyBlue", value: "#00BFFF", shades: ["#fff", "#000"] },
+      { name: "DimGray", value: "#696969", shades: ["#fff", "#000"] },
+      { name: "DimGrey", value: "#696969", shades: ["#fff", "#000"] },
+      { name: "DodgerBlue", value: "#1E90FF", shades: ["#fff", "#000"] },
+      { name: "FireBrick", value: "#B22222", shades: ["#fff", "#000"] },
+      { name: "FloralWhite", value: "#FFFAF0", shades: ["#fff", "#000"] },
+      { name: "ForestGreen", value: "#228B22", shades: ["#fff", "#000"] },
+      { name: "Fuchsia", value: "#FF00FF", shades: ["#fff", "#000"] },
+      { name: "Gainsboro", value: "#DCDCDC", shades: ["#fff", "#000"] },
+      { name: "GhostWhite", value: "#F8F8FF", shades: ["#fff", "#000"] },
+      { name: "Gold", value: "#FFD700", shades: ["#fff", "#000"] },
+      { name: "GoldenRod", value: "#DAA520", shades: ["#fff", "#000"] },
+      { name: "Gray", value: "#808080", shades: ["#fff", "#000"] },
+      { name: "Grey", value: "#808080", shades: ["#fff", "#000"] },
+      { name: "Green", value: "#008000", shades: ["#fff", "#000"] },
+      { name: "GreenYellow", value: "#ADFF2F", shades: ["#fff", "#000"] },
+      { name: "HoneyDew", value: "#F0FFF0", shades: ["#fff", "#000"] },
+      { name: "HotPink", value: "#FF69B4", shades: ["#fff", "#000"] },
+      { name: "IndianRed", value: "#CD5C5C", shades: ["#fff", "#000"] },
+      { name: "Indigo", value: "#4B0082", shades: ["#fff", "#000"] },
+      { name: "Ivory", value: "#FFFFF0", shades: ["#fff", "#000"] },
+      { name: "Khaki", value: "#F0E68C", shades: ["#fff", "#000"] },
+      { name: "Lavender", value: "#E6E6FA", shades: ["#fff", "#000"] },
+      { name: "LavenderBlush", value: "#FFF0F5", shades: ["#fff", "#000"] },
+      { name: "LawnGreen", value: "#7CFC00", shades: ["#fff", "#000"] },
+      { name: "LemonChiffon", value: "#FFFACD", shades: ["#fff", "#000"] },
+      { name: "LightBlue", value: "#ADD8E6", shades: ["#fff", "#000"] },
+      { name: "LightCoral", value: "#F08080", shades: ["#fff", "#000"] },
+      { name: "LightCyan", value: "#E0FFFF", shades: ["#fff", "#000"] },
+      { name: "LightGoldenRodYellow", value: "#FAFAD2", shades: ["#fff", "#000"] },
+      { name: "LightGray", value: "#D3D3D3", shades: ["#fff", "#000"] },
+      { name: "LightGrey", value: "#D3D3D3", shades: ["#fff", "#000"] },
+      { name: "LightGreen", value: "#90EE90", shades: ["#fff", "#000"] },
+      { name: "LightPink", value: "#FFB6C1", shades: ["#fff", "#000"] },
+      { name: "LightSalmon", value: "#FFA07A", shades: ["#fff", "#000"] },
+      { name: "LightSeaGreen", value: "#20B2AA", shades: ["#fff", "#000"] },
+      { name: "LightSkyBlue", value: "#87CEFA", shades: ["#fff", "#000"] },
+      { name: "LightSlateGray", value: "#778899", shades: ["#fff", "#000"] },
+      { name: "LightSlateGrey", value: "#778899", shades: ["#fff", "#000"] },
+      { name: "LightSteelBlue", value: "#B0C4DE", shades: ["#fff", "#000"] },
+      { name: "LightYellow", value: "#FFFFE0", shades: ["#fff", "#000"] },
+      { name: "Lime", value: "#00FF00", shades: ["#fff", "#000"] },
+      { name: "LimeGreen", value: "#32CD32", shades: ["#fff", "#000"] },
+      { name: "Linen", value: "#FAF0E6", shades: ["#fff", "#000"] },
+      { name: "Magenta", value: "#FF00FF", shades: ["#fff", "#000"] },
+      { name: "Maroon", value: "#800000", shades: ["#fff", "#000"] },
+      { name: "MediumAquaMarine", value: "#66CDAA", shades: ["#fff", "#000"] },
+      { name: "MediumBlue", value: "#0000CD", shades: ["#fff", "#000"] },
+      { name: "MediumOrchid", value: "#BA55D3", shades: ["#fff", "#000"] },
+      { name: "MediumPurple", value: "#9370DB", shades: ["#fff", "#000"] },
+      { name: "MediumSeaGreen", value: "#3CB371", shades: ["#fff", "#000"] },
+      { name: "MediumSlateBlue", value: "#7B68EE", shades: ["#fff", "#000"] },
+      { name: "MediumSpringGreen", value: "#00FA9A", shades: ["#fff", "#000"] },
+      { name: "MediumTurquoise", value: "#48D1CC", shades: ["#fff", "#000"] },
+      { name: "MediumVioletRed", value: "#C71585", shades: ["#fff", "#000"] },
+      { name: "MidnightBlue", value: "#191970", shades: ["#fff", "#000"] },
+      { name: "MintCream", value: "#F5FFFA", shades: ["#fff", "#000"] },
+      { name: "MistyRose", value: "#FFE4E1", shades: ["#fff", "#000"] },
+      { name: "Moccasin", value: "#FFE4B5", shades: ["#fff", "#000"] },
+      { name: "NavajoWhite", value: "#FFDEAD", shades: ["#fff", "#000"] },
+      { name: "Navy", value: "#000080", shades: ["#fff", "#000"] },
+      { name: "OldLace", value: "#FDF5E6", shades: ["#fff", "#000"] },
+      { name: "Olive", value: "#808000", shades: ["#fff", "#000"] },
+      { name: "OliveDrab", value: "#6B8E23", shades: ["#fff", "#000"] },
+      { name: "Orange", value: "#FFA500", shades: ["#fff", "#000"] },
+      { name: "OrangeRed", value: "#FF4500", shades: ["#fff", "#000"] },
+      { name: "Orchid", value: "#DA70D6", shades: ["#fff", "#000"] },
+      { name: "PaleGoldenRod", value: "#EEE8AA", shades: ["#fff", "#000"] },
+      { name: "PaleGreen", value: "#98FB98", shades: ["#fff", "#000"] },
+      { name: "PaleTurquoise", value: "#AFEEEE", shades: ["#fff", "#000"] },
+      { name: "PaleVioletRed", value: "#DB7093", shades: ["#fff", "#000"] },
+      { name: "PapayaWhip", value: "#FFEFD5", shades: ["#fff", "#000"] },
+      { name: "PeachPuff", value: "#FFDAB9", shades: ["#fff", "#000"] },
+      { name: "Peru", value: "#CD853F", shades: ["#fff", "#000"] },
+      { name: "Pink", value: "#FFC0CB", shades: ["#fff", "#000"] },
+      { name: "Plum", value: "#DDA0DD", shades: ["#fff", "#000"] },
+      { name: "PowderBlue", value: "#B0E0E6", shades: ["#fff", "#000"] },
+      { name: "Purple", value: "#800080", shades: ["#fff", "#000"] },
+      { name: "RebeccaPurple", value: "#663399", shades: ["#fff", "#000"] },
+      { name: "Red", value: "#FF0000", shades: ["#fff", "#000"] },
+      { name: "RosyBrown", value: "#BC8F8F", shades: ["#fff", "#000"] },
+      { name: "RoyalBlue", value: "#4169E1", shades: ["#fff", "#000"] },
+      { name: "SaddleBrown", value: "#8B4513", shades: ["#fff", "#000"] },
+      { name: "Salmon", value: "#FA8072", shades: ["#fff", "#000"] },
+      { name: "SandyBrown", value: "#F4A460", shades: ["#fff", "#000"] },
+      { name: "SeaGreen", value: "#2E8B57", shades: ["#fff", "#000"] },
+      { name: "SeaShell", value: "#FFF5EE", shades: ["#fff", "#000"] },
+      { name: "Sienna", value: "#A0522D", shades: ["#fff", "#000"] },
+      { name: "Silver", value: "#C0C0C0", shades: ["#fff", "#000"] },
+      { name: "SkyBlue", value: "#87CEEB", shades: ["#fff", "#000"] },
+      { name: "SlateBlue", value: "#6A5ACD", shades: ["#fff", "#000"] },
+      { name: "SlateGray", value: "#708090", shades: ["#fff", "#000"] },
+      { name: "SlateGrey", value: "#708090", shades: ["#fff", "#000"] },
+      { name: "Snow", value: "#FFFAFA", shades: ["#fff", "#000"] },
+      { name: "SpringGreen", value: "#00FF7F", shades: ["#fff", "#000"] },
+      { name: "SteelBlue", value: "#4682B4", shades: ["#fff", "#000"] },
+      { name: "Tan", value: "#D2B48C", shades: ["#fff", "#000"] },
+      { name: "Teal", value: "#008080", shades: ["#fff", "#000"] },
+      { name: "Thistle", value: "#D8BFD8", shades: ["#fff", "#000"] },
+      { name: "Tomato", value: "#FF6347", shades: ["#fff", "#000"] },
+      { name: "Turquoise", value: "#40E0D0", shades: ["#fff", "#000"] },
+      { name: "Violet", value: "#EE82EE", shades: ["#fff", "#000"] },
+      { name: "Wheat", value: "#F5DEB3", shades: ["#fff", "#000"] },
+      { name: "White", value: "#FFFFFF", shades: ["#fff", "#000"] },
+      { name: "WhiteSmoke", value: "#F5F5F5", shades: ["#fff", "#000"] },
+      { name: "Yellow", value: "#FFFF00", shades: ["#fff", "#000"] },
+      { name: "YellowGreen", value: "#9ACD32", shades: ["#fff", "#000"] }
+    ];
+  
+      // Create color boxes
+      var colorContainer = document.getElementById("color-crayon");
+      for (var i = 0; i < colors.length; i++) {
+        var colorBox = document.createElement("div");
+        colorBox.className = "crayon";
+      colorBox.style.backgroundImage = `linear-gradient(${colors[i].shades[0]}, ${colors[i].value}, ${colors[i].shades[1]})`;
+  
+        var crayonTip = document.createElement("div");
+        crayonTip.className = "cap";
+        colorBox.appendChild(crayonTip);
+        var colorLabel = document.createElement("div");
+        colorLabel.className = "sleeve";
+        colorLabel.textContent = colors[i].name;
+        colorLabel.style.color = colors[i].value; 
+        colorBox.appendChild(colorLabel);
+        colorContainer.appendChild(colorBox);
+      }
+
+
+
+      
+    </script>
+
+    <!--
+    <div class="container">
+      <div class="crayon red">
+        <div class="cap"></div>
+        <div class="sleeve"><p>red</p></div>
+      </div>
+      <div class="crayon green">
+        <div class="cap"></div>
+        <div class="sleeve"><p>green</p></div>
+      </div>
+      <div class="crayon blue">
+        <div class="cap"></div>
+        <div class="sleeve"><p>blue</p></div>
+      </div>
+      <div class="crayon aliceBlue">
+        <div class="cap"></div>
+        <div class="sleeve"><p>aliceblue</p></div>
+      </div>
+      <div class="crayon antiqueWhite">
+        <div class="cap"></div>
+        <div class="sleeve"><p>antiquewhite</p></div>
+      </div>
+    </div> -->
+  </body>
+</html>
+
+<!--- attributions: freecodecamp, w3 schools-->
